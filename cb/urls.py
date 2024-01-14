@@ -20,6 +20,7 @@ from django.urls import path, include
 
 handler404 = 'sport.views.error_404'
 urlpatterns = [
-    path('sports/', include('sport.urls')),
     path('admin/', admin.site.urls),
+    path('', include('signlog.urls')),
+    path('sports/', include('sport.urls')),
 ] + static('static')

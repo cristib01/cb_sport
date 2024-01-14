@@ -1,24 +1,50 @@
-li a {
-    color: blue;
-    text-decoration: none;
-    font-weight: bold;
-}
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f0f0;
     font-size: 16px;
+    margin: 0;
+    padding: 0;
 }
+
+.tabs {
+    background-color: #6495ED;
+    overflow: hidden;
+    padding: 20px;
+    text-align: center;
+}
+
+.tab {
+    display: inline-block;
+    margin: 0 10px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s background-color;
+}
+
+.tab:hover {
+    background-color: #87CEEB;
+}
+
+.content {
+    padding: 20px;
+}
+
 p {
     color: #FF6347;
     font-weight: bold;
     font-size: 16px;
 }
+
 .title {
     font-size: 32px;
     font-weight: bold;
     text-decoration: underline;
     margin-bottom: 20px;
 }
+
 input[type="radio"] {
     appearance: none;
     border: 2px solid #6495ED;
@@ -28,9 +54,11 @@ input[type="radio"] {
     transition: all 0.3s ease;
     vertical-align: middle;
 }
+
 input[type="radio"]:checked {
     background-color: #6495ED;
 }
+
 input[type="submit"] {
     background-color: #6495ED;
     color: white;
@@ -43,10 +71,12 @@ input[type="submit"] {
     margin-top: 10px;
     transition: 0.3s transform;
 }
+
 input[type="submit"]:hover {
     background-color: #87CEEB;
     transform: scale(1.1);
 }
+
 label {
     display: block;
     margin-bottom: 5px;
@@ -54,6 +84,7 @@ label {
     font-size: 14px;
     vertical-align: middle;
 }
+
 input[type="text"],
 input[type="radio"] {
     margin-bottom: 10px;
@@ -62,6 +93,13 @@ input[type="radio"] {
     border-radius: 3px;
     display: inline-block;
 }
+
 form > div {
     margin-bottom: 15px;
+}
+
+li a {
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
 }

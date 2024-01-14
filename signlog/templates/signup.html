@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Inregistrare
+{% endblock %}
+
+
+{% block content %}
+    <h1>Inregistrare</h1>
+    <form method="POST" class="form">
+        <p>{% csrf_token %}
+        {{ form.username.label_tag }}
+        {{ form.username }}
+        </p>
+        <p>
+        {{ form.password1.label_tag }}
+        {{ form.password1 }}
+        </p>
+        <span class="help-text">{{ form.password1.help_text | safe }}</span>
+            <br>
+        <p>
+        {{ form.password2.label_tag }}
+        {{ form.password2 }}
+        </p>
+        <span class="help-text">{{ form.password2.help_text | safe }}</span>
+            <br>
+        <button type="submit">Inregistrare</button>
+            <br>
+            <br>
+        <p style="color: black;">Ai deja cont?</p>
+        <a href="{% url 'signlog:login' %}">Logare</a>
+
+        {% if form.errors %}
+            <div class="error">
+                <strong>Form errors:</strong>
+                {% for field, errors in form.errors.items %}
+                    <strong>{{ field }}:</strong>
+                    {% for error in errors %}
+                        {{ error }}
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </form>
+{% endblock %}

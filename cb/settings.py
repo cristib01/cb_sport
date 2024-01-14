@@ -35,6 +35,8 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'sport.apps.SportConfig',
+    'signlog',
+    'cb',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
