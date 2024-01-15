@@ -1,6 +1,50 @@
 {% extends 'base.html' %}
 
+{% block title %}Sportal{% endblock %}
+
+{% block head %}
+{{ block.super }}
+<style>
+    body {
+      background-image: url('static/images/home.png');
+      background-size: cover;
+      background-position: right 50px;
+      background-repeat: no-repeat;
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+      box-sizing: border-box;
+      max-width: 600px;
+    }
+
+</style>
+{% endblock %}
+
 {% block content %}
-  <h1>Bine ai venit!</h1>
-  <!-- Your homepage content here -->
+<div class="title-white">
+    <h1>Bine ai venit!</h1>
+</div>
+
+<p class="content-text">
+    Sportal.ro, destinația ta pentru o viață sănătoasă și activă! Descoperă produse sportive premium
+    și servicii personalizate pentru a-ți atinge obiectivele de wellness.<br><br>
+
+    <strong>Exploră Lumea Sportului:</strong><br>
+    Experimentează bucuria mișcării și descoperă cele mai recente tendințe în fitness.<br><br>
+
+    <strong>Produse Premium:</strong><br>
+    Găsește echipamente inovatoare și accesorii trendy pentru a-ți maximiza performanța.<br><br>
+
+    <strong>Servicii Personalizate:</strong><br>
+    Beneficiază de instruiri profesioniste și programe adaptate pentru a-ți atinge obiectivele într-un mod
+    sănătos.<br><br>
+
+    <strong>De ce Sportul este Esențial:</strong><br>
+    Investește în sănătatea ta generală și descoperă beneficiile îmbunătățirii stării de spirit și creșterii nivelului
+    de energie.<br><br>
+
+    Alege Sportal pentru o viață mai sănătoasă și mai activă. Echipa noastră pasionată este aici pentru a-ți oferi
+    resursele necesare pentru a-ți atinge potențialul maxim în sport și fitness!
+</p>
 {% endblock %}

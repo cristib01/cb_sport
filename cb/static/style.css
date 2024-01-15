@@ -1,6 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
+    background-color: #d9d9d9;
     font-size: 16px;
     margin: 0;
     padding: 0;
@@ -43,6 +43,30 @@ p {
     font-weight: bold;
     text-decoration: underline;
     margin-bottom: 20px;
+}
+.title-white {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.delog-alignment {
+  text-align: right;
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+
+.username-alignment {
+  text-align: right;
+  position: absolute;
+  top: 50px;
+  right: 20px;
+}
+.content-text {
+  color: #FF6347;
+  font-weight: lighter;
+  font-size: 12x;
 }
 
 input[type="radio"] {
