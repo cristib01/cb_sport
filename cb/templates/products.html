@@ -2,12 +2,38 @@
 
 {% block title %}Products{% endblock %}
 
-{% block content %}
-<h2>Products</h2>
-<p>Te invităm să explorezi gama noastră extinsă de articole sportive de cea mai înaltă calitate.
-     <br>De la echipamente pentru antrenamentele tale zilnice până la îmbrăcăminte și accesorii trendy, avem tot ceea ce îți
-    trebuie pentru a-ți susține activitatea fizică preferată.
-    <br>Descoperă, de asemenea, opțiunile noastre de abonamente sportive personalizate, adaptate nevoilor tale
-    specifice.</p>
+{% block head %}
+    {{ block.super }}
+    <style>
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .product {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+{% endblock %}
 
+{% block content %}
+    <div class="title-white">
+        <h2>Produse</h2>
+    </div>
+
+    <div class="product-container">
+        {% for product in products %}
+            <div class="product">
+                <h3>{{ product.name }}</h3>
+                <p>Tip: {{ product.type }}</p>
+                <p>Gen: {{ product.gender }}</p>
+                {% if product.shape != 'Nu se aplica' %}
+                    <p>Forma: {{ product.shape }}</p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}

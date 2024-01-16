@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
-from django.contrib.auth.decorators import login_required
+
 PRODUCT_TYPES = [
     ('Abonament', 'Subscription'),
     ('Accesoriu', 'Accessory')
@@ -12,7 +12,6 @@ SHAPE_TYPES = [
     ('Relaxed Fit', 'Relaxed fit'),
     ('Nu se aplica', 'Not Applicable')
 ]
-
 
 # Create your models here.
 class Sport(models.Model):
@@ -29,3 +28,5 @@ class Sport(models.Model):
             f'Tip:{self.type}, '
             f'Gen:{self.gender}, '
             f'Forma:{self.shape}')
+
+

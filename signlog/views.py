@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from .forms import LoginForm, SignupForm
 from django.contrib.auth.models import User
+from .models import Product
 
 
 def index(request):
@@ -42,4 +43,5 @@ def about(request):
     return render(request, 'about.html')
 @login_required(login_url='/logare')
 def products(request):
-    return render(request, 'products.html')
+    products = Product.objects.all()
+    return render(request, 'products.html', {'products': products})
