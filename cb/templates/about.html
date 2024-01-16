@@ -1,37 +1,48 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %}Despre-noi{% endblock %}
 
 {% block head %}
 {{ block.super }}
 <style>
     body {
-      background-image: url('static/images/home.png');
-      background-size: cover;
-      background-position: right 50px;
-      background-repeat: no-repeat;
+        background-image: url('{% static "images/about.png" %}');
+        background-size: 50% 200%;
+        background-position: right 50px;
+        background-repeat: no-repeat;
     }
     .content {
-      flex: 1;
-      padding: 20px;
-      box-sizing: border-box;
-      max-width: 600px;
+        flex: 1;
+        padding: 20px;
+        box-sizing: border-box;
+        max-width: 50%;
     }
-
 </style>
 {% endblock %}
 
 
 {% block content %}
-  <h2>Despre Noi</h2>
-  <p>Bine ați venit pe Sportal.ro! Suntem pasionați de sport și ne dedicăm să vă oferim informații, știri și actualizări legate de diverse activități sportive.</p>
+<div class="title-white">
+    <h1> Despre Noi</h1>
+</div>
+<p class="content-text">
+    Suntem pasionați de sport și ne dedicăm să vă oferim informații, știri și actualizări legate de diverse activități
+    sportive.<br><br>
 
-  <h3>Misiunea Noastră</h3>
-  <p>Misiunea noastră este să promovăm un stil de viață sănătos și activ prin dragostea pentru sport. Ne străduim să vă ținem la curent cu cele mai recente evenimente, scoruri și noutăți din lumea sportului.</p>
+    <strong>Misiunea Noastră:</strong><br>
+    Misiunea noastră este să promovăm un stil de viață sănătos și activ prin dragostea pentru sport. Ne străduim să vă
+    ținem la curent cu cele mai recente evenimente, scoruri și noutăți din lumea sportului.<br><br>
 
-  <h3>De ce să ne alegeți?</h3>
-  <p>Fie că sunteți un entuziast al sportului, un atlet sau doar curios în privința sportului, avem ceva pentru fiecare. Platforma noastră oferă o gamă diversificată de articole, știri și perspective pentru a vă menține informați și implicați.</p>
+    <strong>De ce să ne alegeți?</strong><br>
+    Fie că sunteți un entuziast al sportului, un atlet sau doar curios în privința sportului, avem ceva pentru fiecare.
+    Platforma noastră oferă o gamă diversificată de articole, știri și perspective pentru a vă menține informați și
+    implicați.<br><br>
 
-  <h3>Bine ați venit la Sportal!</h3>
-  <p>Bucurați-vă de explorarea site-ului nostru, descoperiți produsele sportive premium și beneficiați de serviciile personalizate care vă vor ajuta să atingeți obiectivele de wellness. Împreună, putem transforma sportul într-o parte esențială a vieții voastre cotidiene!</p>
+    <strong>Bine ați venit la Sportal!</strong><br>
+    Bucurați-vă de explorarea site-ului nostru, descoperiți produsele sportive premium și beneficiați de serviciile
+    personalizate care vă vor ajuta să atingeți obiectivele de wellness. Împreună, putem transforma sportul într-o parte
+    esențială a vieții voastre cotidiene!
+</p>
 {% endblock %}

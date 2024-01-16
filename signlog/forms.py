@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.utils.translation import gettext_lazy as _trans
+from django.contrib.auth import authenticate
 
 
 class SignupForm(forms.Form):
@@ -50,3 +51,23 @@ class SignupForm(forms.Form):
 class LoginForm(forms.Form):
     username = forms.CharField(label=_trans('Nume de utilizator'))
     password = forms.CharField(widget=forms.PasswordInput, label=_trans('Parola'))
+
+    def clean_username(self):
+        username = self.cleaned_data['username']
+        if not User.objects.filter(username=username).exists():
+            raise forms.ValidationError(_trans('Nume de utilizator invalid.'))
+        return username
+
+    def clean(self):
+        cleaned_data = super().clean()
+        username = cleaned_data.get('username')
+        password = cleaned_data.get('password')
+
+        if username and password:
+            user = authenticate(username=username, password=password)
+            if user is None:
+                raise forms.ValidationError(_trans('Parola incorecta.'))
+
+        return cleaned_data
+
+

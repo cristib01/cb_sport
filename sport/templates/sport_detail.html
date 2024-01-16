@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ sport.name }}</title>
-</head>
-<body>
-{{ sport }}
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}{{ sport.name }}{% endblock %}
+
+{% block content %}
+    <div class="sport-details">
+        <h2>{{ sport.name }}</h2>
+        <p>Tip: {{ sport.type }} - Gen: {{ sport.gender }} - Forma: {{ sport.shape }}</p>
+    <p><a href="{% url 'sports:all_sports' %}">Inapoi</a></p>
+    </div>
+{% endblock %}

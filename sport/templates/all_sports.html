@@ -1,23 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sports</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
-    <h1 class="title">Bine ai venit!</h1>
-    <p>Completati formular pentru serviciul/produsul dorit:</p>
-</head>
-<body>
-{% if sports %}
-    <ul>
-        {% for sport in sports %}
-        <li>
-            <a href="{% url 'sports:sport_detail' sport.id %}"> {{sport}} </a>
-        </li>
-        {% endfor %}
-    </ul>
-{% endif %}
-{% include "add_sport_for.html" %}
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Toate-sporturile{% endblock %}
+
+{% block content %}
+    {% if sports %}
+        <ul>
+            {% for sport in sports %}
+                <li>
+                    <div class="tab">
+                        <a href="{% url 'sports:sport_detail' sport.id %}">{{ sport.name }}</a>
+                    </div>
+                    <p>Tip: {{ sport.type }} - Gen: {{ sport.gender }} - Forma: {{ sport.shape }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% include "add_sport_for.html" %}
+{% endblock %}

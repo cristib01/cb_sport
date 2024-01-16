@@ -1,6 +1,6 @@
 <head>
     <meta charset="UTF-8">
-    <title>Sports Form</title>
+    <title>Formular-sport</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
 </head>
@@ -8,37 +8,32 @@
 <form action="{% url 'sports:add' %}" method="POST">
     {% csrf_token %}
     <fieldset>
-        <!-- Name -->
+        <div>
+            <p>Solicita un produs/serviciu completand formularul de mai jos:</p>
+        </div>
         <div class="form-section">
             <label for="name">Nume produs/serviciu:</label>
             <input type="text" name="name" id="name">
         </div>
-        <!-- Type -->
         <div class="form-section">
             <label for="type">Tip:</label>
-            <label><input type="radio" name="type" value="Abonament">Abonament</label>
-            <label><input type="radio" name="type" value="Accesoriu">Accesoriu</label>
+            <label class="inline-label"><input type="radio" name="type" value="Abonament">Abonament</label>
+            <label class="inline-label"><input type="radio" name="type" value="Accesoriu">Accesoriu</label>
         </div>
-
-        <!-- Gender -->
         <div class="form-section">
             <label for="gender">Gen:</label>
-            <label><input type="radio" name="gender" value="F">Femeie</label>
-            <label><input type="radio" name="gender" value="M">Barbat</label>
-            <label><input type="radio" name="gender" value="U">Unisex</label>
+            <label class="inline-label"><input type="radio" name="gender" value="F">Femeie</label>
+            <label class="inline-label"><input type="radio" name="gender" value="M">Barbat</label>
+            <label class="inline-label"><input type="radio" name="gender" value="U">Unisex</label>
         </div>
-
-        <!-- Shape -->
         <div class="form-section">
             <label for="shape">Forma:</label>
-            <label><input type="radio" name="shape" value="Regular">Regular</label>
-            <label><input type="radio" name="shape" value="Slimfit">Slimfit</label>
-            <label><input type="radio" name="shape" value="Relaxed Fit">Relaxed Fit</label>
-            <label><input type="radio" name="shape" value="Nu se aplica">Nu se aplica</label>
+            <label class="inline-label"><input type="radio" name="shape" value="Regular">Regular</label>
+            <label class="inline-label"><input type="radio" name="shape" value="Slimfit">Slimfit</label>
+            <label class="inline-label"><input type="radio" name="shape" value="Relaxed Fit">Relaxed Fit</label>
+            <label class="inline-label"><input type="radio" name="shape" value="Nu se aplica">Nu se aplica</label>
         </div>
       </fieldset>
-
-        <!-- Submit button -->
     <input type="submit" value="Adauga optiune">
 </form>
 </body>

@@ -22,5 +22,5 @@ handler404 = 'sport.views.error_404'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('signlog.urls')),
-    path('sports/', include('sport.urls')),
+    path('sportal/', include('sport.urls')),
 ] + static('static')

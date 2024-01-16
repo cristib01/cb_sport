@@ -5,14 +5,12 @@ body {
     margin: 0;
     padding: 0;
 }
-
 .tabs {
     background-color: #6495ED;
     overflow: hidden;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
 }
-
 .tab {
     display: inline-block;
     margin: 0 10px;
@@ -23,21 +21,32 @@ body {
     border-radius: 5px;
     transition: 0.3s background-color;
 }
-
 .tab:hover {
     background-color: #87CEEB;
 }
-
+.delog-alignment {
+    text-align: right;
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+.username-alignment {
+    text-align: right;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+}
+.username-display {
+    color: #FFC0A8;
+}
 .content {
     padding: 20px;
 }
-
 p {
     color: #FF6347;
     font-weight: bold;
     font-size: 16px;
 }
-
 .title {
     font-size: 32px;
     font-weight: bold;
@@ -50,25 +59,11 @@ p {
     font-weight: bold;
     margin-bottom: 20px;
 }
-.delog-alignment {
-  text-align: right;
-  position: absolute;
-  top: 20px;
-  right: 0;
-}
-
-.username-alignment {
-  text-align: right;
-  position: absolute;
-  top: 50px;
-  right: 20px;
-}
 .content-text {
   color: #FF6347;
   font-weight: lighter;
   font-size: 12x;
 }
-
 input[type="radio"] {
     appearance: none;
     border: 2px solid #6495ED;
@@ -78,11 +73,9 @@ input[type="radio"] {
     transition: all 0.3s ease;
     vertical-align: middle;
 }
-
 input[type="radio"]:checked {
     background-color: #6495ED;
 }
-
 input[type="submit"] {
     background-color: #6495ED;
     color: white;
@@ -95,12 +88,10 @@ input[type="submit"] {
     margin-top: 10px;
     transition: 0.3s transform;
 }
-
 input[type="submit"]:hover {
     background-color: #87CEEB;
     transform: scale(1.1);
 }
-
 label {
     display: block;
     margin-bottom: 5px;
@@ -108,7 +99,13 @@ label {
     font-size: 14px;
     vertical-align: middle;
 }
-
+.inline-label {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 14px;
+    vertical-align: middle;
+}
 input[type="text"],
 input[type="radio"] {
     margin-bottom: 10px;
@@ -117,13 +114,10 @@ input[type="radio"] {
     border-radius: 3px;
     display: inline-block;
 }
-
+li a {
+    color: #0000FF;
+    font-weight: bold;
+}
 form > div {
     margin-bottom: 15px;
-}
-
-li a {
-    color: blue;
-    text-decoration: none;
-    font-weight: bold;
 }

@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from .forms import LoginForm, SignupForm
@@ -39,6 +40,6 @@ def user_logout(request):
 
 def about(request):
     return render(request, 'about.html')
-
+@login_required(login_url='/logare')
 def products(request):
     return render(request, 'products.html')

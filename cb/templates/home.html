@@ -1,24 +1,25 @@
 {% extends 'base.html' %}
 
+{% load static %}  {# Load the static template tags #}
+
 {% block title %}Sportal{% endblock %}
 
 {% block head %}
-{{ block.super }}
-<style>
-    body {
-      background-image: url('static/images/home.png');
-      background-size: cover;
-      background-position: right 50px;
-      background-repeat: no-repeat;
-    }
-    .content {
-      flex: 1;
-      padding: 20px;
-      box-sizing: border-box;
-      max-width: 600px;
-    }
-
-</style>
+    {{ block.super }}
+    <style>
+        body {
+            background-image: url('{% static "images/home.png" %}');
+            background-size: 100% 200%;
+            background-position: right 50px;
+            background-repeat: no-repeat;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            max-width: 50%;
+        }
+    </style>
 {% endblock %}
 
 {% block content %}

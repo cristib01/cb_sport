@@ -8,5 +8,5 @@ urlpatterns = [
     path('logare/', user_login, name='login'),
     path('logare-o/', user_logout, name='logout'),
     path('despre-noi/', about, name='about'),
-    path('produse/', products, name='products'),
+    path('produse/', products, name='products')
 ]

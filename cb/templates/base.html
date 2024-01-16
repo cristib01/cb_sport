@@ -17,9 +17,9 @@
     <a href="{% url 'signlog:about' %}" class="tab">Despre noi</a>
     {% if request.user.is_authenticated %}
         <a href="{% url 'signlog:products' %}" class="tab">Produse</a>
-        <a href="{% url 'sports:all_sports' %}" class="tab">Sports</a>
+        <a href="{% url 'sports:all_sports' %}" class="tab">Solicita un sportal!</a>
         <div class="username-alignment">
-        <p>{{ request.user.username }}</p>
+        <p class="username-display">{{ request.user.username }}</p>
         </div>
         <div class="delog-alignment">
             <a href="{% url 'signlog:logout' %}" class="tab">Delogare</a>
