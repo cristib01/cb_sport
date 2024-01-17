@@ -12,7 +12,7 @@
 4. Create a README file:
 
     ```bash
-   echo "# Repo1" >> README.md # replace "# Repo1" with your desired name
+   echo "your-repo" >> README.md # replace "your-repo" with your desired name
     ```
 
 5. Add the README file to the staging area
@@ -32,7 +32,7 @@
 
 8. Add the remote repository:
     ```bash
-   git remote add origin https://github.com/your_username/Repo1.git # Replace "your_username" with your actual username.
+   git remote add origin https://github.com/your-username/your-repo.git # Replace "your-username" with your actual username.
     ```
 
 9. Push the changes to GitHub:
@@ -44,12 +44,12 @@
 
 1. Clone the repository:
     ```bash
-   git clone https://github.com/your_username/Repo1.git
+   git clone https://github.com/your-username/your-repo.git
     ```
 
 2. Navigate to the cloned repository:
     ```bash
-   cd Repo1
+   cd your-repo
     ```
 
 3. Set the branch to main (if not already set):
@@ -59,7 +59,7 @@
 
 4. Add the remote repository (if not already added):
     ```bash
-   git remote add origin https://github.com/cristib01/Repo1.git
+   git remote add origin https://github.com/your-username/your-repo.git
     ```
 
 5. Push changes to the repository:
@@ -119,6 +119,6 @@ Make sure you have the following installed on your machine:
    python manage.py runserver
     ```
 
-#### Replace placeholders like "Your Project Name," "your-username," "your-repo," "Your License," etc., with your actual project information.
+#### Replace placeholders like "Your Project Name", "your-username", "your-repo", "Your License", etc., with your actual project information.
 
 Access the application at http://127.0.0.1:8000/
