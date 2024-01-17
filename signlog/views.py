@@ -9,17 +9,20 @@ from .models import Product
 def index(request):
     return render(request, 'home.html')
 
+
 def user_signup(request):
     if request.method == 'POST':
         form = SignupForm(request.POST)
         if form.is_valid():
             username = form.cleaned_data['username']
+            email = form.cleaned_data['email']
             password1 = form.cleaned_data['password1']
-            User.objects.create_user(username=username,password=password1)
+            User.objects.create_user(username=username, email=email, password=password1)
             return redirect('signlog:login')
     else:
         form = SignupForm()
     return render(request, 'signup.html', {'form': form})
+
 
 def user_login(request):
     if request.method == 'POST':
@@ -35,12 +38,16 @@ def user_login(request):
         form = LoginForm()
     return render(request, 'login.html', {'form': form})
 
+
 def user_logout(request):
     logout(request)
     return redirect('signlog:index')
 
+
 def about(request):
     return render(request, 'about.html')
+
+
 @login_required(login_url='/logare')
 def products(request):
     products = Product.objects.all()

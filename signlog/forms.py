@@ -6,6 +6,7 @@ from django.contrib.auth import authenticate
 
 class SignupForm(forms.Form):
     username = forms.CharField(label=_trans('Nume de utilizator'))
+    email = forms.EmailField(label=_trans('Email'))
     password1 = forms.CharField(
         widget=forms.PasswordInput,
         label=_trans('Parola'),
