@@ -105,20 +105,30 @@ Make sure you have the following installed on your machine:
    pip install -r requirements.txt
     ```
 
-5. Apply migrations:
+5. Create project folder:
+    ```bash
+   django-admin startproject "your-project-name"
+    ```
+
+6. Create application:
+    ```bash
+   python manage.py startapp "your-application-name"
+    ```
+
+7. Apply migrations:
     ```bash
    python manage.py makemigrations
    python manage.py migrate
     ```
-6. Create a superuser (for Django Admin):
+8. Create a superuser (for Django Admin):
     ```bash
    python manage.py createsuperuser
     ```
-7. Run the development server:
+9. Run the development server:
     ```bash
    python manage.py runserver
     ```
 
-#### Replace placeholders like "Your Project Name", "your-username", "your-repo", "Your License", etc., with your actual project information.
+#### Replace placeholders like "your-project-name", "your-username", "your-repo", "your-application-name", etc., with your actual project information.
 
 Access the application at http://127.0.0.1:8000/
